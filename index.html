@@ -1,30 +1,47 @@
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-    </head>
-<body>
-        <div class="button" onclick="ButtonSelect(0);"><a>Предложить обмен</a></div>
-        <div class="button" onclick="ButtonSelect(1);" style="margin-left: 200px;"><a>Вылечить</a></div>
-        <div class="button" onclick="ButtonSelect(2);"  style="margin-left: 240px;"><a>Взаимодействие</a></div>
-        <div class="button" onclick="ButtonSelect(3);"  style="margin-left: 200px;"><a>Фракция</a></div>
-        <div class="button" onclick="ButtonSelect(4);"><a>Сообщество</a></div>
-        <div class="button" onclick="ButtonSelect(5);"  style="margin-top:-132px; margin-left: -200px;"><a>Имущество</a></div>
-        <div class="button" onclick="ButtonSelect(6);"  style="margin-top:-132px; margin-left: -240px;"><a>Показать паспорт</a></div>
-        <div class="button" onclick="ButtonSelect(7);"  style="margin-top:-132px; margin-left: -200px;"><a>Передать деньги</a></div>
-        <a id="name" class="text-player">{NAME_PLAYER}</a>
-</body>
-<script src="cef-menu.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(this).keydown(function(eventObject){
-    if (eventObject.which == 27)
-    {
-        cef.hide(true);
-        cef.set_focus(false);
-        cef.emit('target:esc');
-    }
-    });
 
-</script>
+   <head> 
+      <meta charset="utf-8">
+      <title>[CEF] Logo</title>
+      <link rel="stylesheet" href="style.css"> <!-- подключаем файл стилей -->
+   </head>
+
+   <body>
+   <div class = "text">KrasavaX</div>
+   </body>
+    
+    <style>
+    @import url ('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap'); //подключаем шрифты
+*{
+        margin: 0;
+        padding: 0;
+        font-family:'Poppins',sans-serif;
+}
+
+html,body{
+        display: grid;
+        height: 10%;
+        position: absolute;
+        top: 5px; left: 850px; //позиция 
+
+}
+
+.text{
+        font-size: 30px;
+        font-weight: 800;
+        text-transform: uppercase;
+        background: linear-gradient(135deg, #533cfd 0%, #de00ed 25%, #f66e48 50%, #de00ed 75%, #5335cf 100%); //меняем цвета на которые вам нужно
+        background-size: 400%;
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent;
+        animation: animate 10s linear infinite;
+} 
+
+@keyframes animate{
+        100%{
+        background-position: 400%;      
+ }
+}
+    </style>
 </html>
